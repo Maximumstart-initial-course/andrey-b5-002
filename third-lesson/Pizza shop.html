@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza shop</title>
+</head>
+<body>
+	<form action="http://maximumstart-echo.herokuapp.com" method="post" enctype="multipart/form-data">
+	<table border="1">
+		<thead>
+		<tr>
+			<th colspan="2">Pizza shop 2.0</th>
+		</tr>
+		</thead>
+		<tr>
+			<td><label for="name-field">Name</label></td>
+			<td><input type="text" name="name" id="name-field" required></td>
+		</tr>
+		<tr>
+			<td>Pizza Topping</td>
+			<td>
+				<div><label for="Supreme-field">Supreme</label>
+				<input type="radio" name="topping" id="supreme-field" value="1">
+				</div>
+				<div><label for="Vegeterian-field">Vegeterian</label>
+				<input type="radio" name="topping" id="Vegeterian-field" value="2">
+				</div>
+				<div><label for="Hawaiian-field">Hawaiian</label>
+				<input type="radio" name="topping" id="Hawaiian-field" value="3">
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="sauce-field">Pizza Sauce</label></td>
+			<td>
+				<select name="sause" id="sauce-field">
+				<option value="1">Tomato</option>
+				<option value="2">Peper sause</option>
+				</select>	
+			</td>
+		</tr>
+		<tr>
+			<td>Optional Extras</td>
+			<td>
+				<input type="checkbox" id="Cheese-field">
+				<label for="Cheese-field">Extra Cheese</label>
+				<input type="checkbox" id="Glutene-field">
+				<label for="Glutene-field">Gluten Free Base</label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<label for="Delivery-field">Delivery Instructions:</label>
+				<div><textarea name="delivery" id="Delivery-field" cols="50" rows="4"></textarea></div>
+			</td>
+			
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="Send My Order"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

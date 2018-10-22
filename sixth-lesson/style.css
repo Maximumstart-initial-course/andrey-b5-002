@@ -21,6 +21,9 @@
 /*
 	Ниже можно начинать писать свои стили.
 */
+body {
+	margin: 0;
+}
 
 .header {
 	color: black;
@@ -34,8 +37,9 @@
 	background-color: #ccc;
 	border: 1px dashed black;
 	margin: 30px;
-	height: 165px;
+	min-height: 165px;
 	padding: 10px 30px 10px 30px;
+	object-fit: cover;
 }
 .article__link {
 	color: black;

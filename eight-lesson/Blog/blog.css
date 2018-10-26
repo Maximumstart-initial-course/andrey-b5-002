@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	background-color: #f5f5f5;
+	counter-reset: section;
 }
 
 * {
@@ -17,9 +18,13 @@ html {
 	
 }
 
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
 .website {
-	margin-top: 20px;
-    color: black;
+	color: black;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: 100px 300px;
@@ -95,16 +100,11 @@ aside {
 	display: grid;
 	grid-template-rows: repeat(2, 50%);
 	grid-template-columns: repeat(5, 20%);
-	grid-gap: 3px;
+	grid-gap: 5px;
 	padding: 7px 7px 7px 0;
 	align-content: center;
-	margin: 5px auto;
-}
-
-.article-container li {
-	margin: 7px;
-	width: 50px;
-	height: 50px;
+	margin: 10px auto;
+	margin-right: 15px;
 }
 
 .foto {
@@ -118,6 +118,8 @@ height: 100%;
 	padding: 9px;
 	margin-right: 8px;
 	text-align: center;
+	width: 40px;
+	height: 40px;
 }
 
 .facebook, .instagram {
@@ -186,37 +188,50 @@ input {
 	margin: 20px 0 20px 0;
 }
 
+input:hover {
+	border: 1px solid #06070a;
+	transition: .3s ease-in-out;
+}
+
 .number-div {
-	display: flex;
-	flex-direction: row;
+	/*display: flex;
+	flex-direction: row;*/
 	padding: 10px;
 	margin: 10px;
-
-
+	border-bottom: 1px solid grey;
 }
 
 .acide-h2, .number {
 	font-size: 12px;
 	text-decoration: none;
 	color: grey;
-	
 }
 
+.acide-h2::before {
+	display: inline-block;
+	counter-increment: section;
+    content: counter(section) "";
+    border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 50%;
+	padding: 12px;
+	width: 14px;
+	height: 14px;
+	text-align: center;
+	margin: 5px;
+}
 
 .number {
 	border: 1px solid #cecece;
 	background: #F6F6f6;
 	border-radius: 50%;
-	padding: 11px;
+	padding: 9px;
 	width: 35px;
+	height: 35px;
 	text-align: center;
 }
 
 .number-link {
 	text-decoration: none;
 	margin: 10px 10px 10px 0;
-}
-
-.number-div {
-	border-bottom: 1px solid grey;
 }
